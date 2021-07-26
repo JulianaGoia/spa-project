@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="./SPAprojectStyle.css" rel="stylesheet" />
+    <script defer type="text/javascript" src="./SPAprojectJs.js"></script>
+    <title>Controle Financeiro</title>
+</head>
+
+<body>
+ <!-- Barra Superior -->
+    
+    <div class="header-top">
+        <img src="./images/Ellipse 13.png"/>
+        <span>
+        Controle Financeiro
+        </span>
+        <div class="responsive-menu">
+            <div class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="close">
+                <li>x</li>
+            </ul>
+            <ul>
+                <li>Cadastro de transações</li>
+                <div></div>
+                <li onclick="limparDados()">Limpar dados</li>
+                <div></div>
+                <li onclick="salvarServidor()">Salvar no servidor</li>
+            </ul>
+        </div>  
+    </div>
+
+    <div class="content">
+<!-- Parte do formulario -->
+
+    <div class="form">
+        <div class="form-title">
+            Nova transação
+        </div>
+
+        <form id="cadastro" onsubmit="validarCadastro(event)">
+        <div class="form-body">
+            <div class="line1">
+                <label for="tipo">Tipo de transação</label>
+                <select name="tipo" id="tipo">
+                <option value="compra">Compra</option>
+                <option value="venda">Venda</option>
+                </select>
+                <div id="error_tipo" style="color: red;"></div>
+            </div>
+
+            <div class="line2">
+                <label for="nome">Nome da mercadoria</label>
+                <input placeholder="Input" type="text" id="nome" name="nome">
+                <div id="error_mercadoria" style="color: red;"></div>
+            </div>
+
+            <div class="line3">
+                <label for="valor">Valor</label>
+                <input placeholder="R$ 0,00" type="number" id="valor" name="valor" onkeydown="formatarMoeda()">
+                <div id="error_valor" style="color: red;"></div>
+            </div> 
+        </div>
+
+            <div class="form-button">
+                <input type="submit" value="Adicionar transação">
+            </div>
+        </form>
+        <div id="lista"></div>
+    </div>  
+    
+    <hr class="hr1">
+  
+<!-- Parte da tabela -->
+    <div class="table">
+        <div class="table-title">
+            Extrato de transações
+        </div>
+        <div class="table-content">
+            <table>
+                <thead>
+                    <th>Mercadoria</th>
+                    <th>Valor</th>
+                   
+                </thead>    
+        
+                <tbody id="table-data">
+                    <tr>
+                        <td id="tdNome"></td>
+                        <td id="tdValor"></td>
+                    </tr>
+                    <tr>
+                        <td class="border" colspan="2"></td>
+                    </tr>
+                </tbody>
+                <tfoot id="table-total">
+                    <tr>
+                        <td class="border" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr class="line">
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        
+        </div>
+    </div>
+
+</div>
+
+
+    
+</body>
+</html>
