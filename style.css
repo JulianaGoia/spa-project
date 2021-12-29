@@ -23,7 +23,7 @@ body{
 }
 
 .header-top h1 {
-    margin: 0px 750px 0px 0px;
+    /* margin: 0px 750px 0px 0px; */
     font-size: 25px;
 }
 
@@ -48,5 +48,9 @@ body{
 }
 
 .menu li {
-    padding: 10px 10px;
+    padding: 10px 15px;
+}
+
+.menu hr {
+    border: 1px solid black;
 }
