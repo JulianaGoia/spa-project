@@ -6,29 +6,41 @@ body{
 }
 
 /* Barra superior----------*/
+.header {
+    background-color: #f1eeee;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header-top {
-    background-color: #E0E0E0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: 100px;
+    width: 85%;
 }
 
 .header-top img {
-    width: 3%;
+    width: 7%;
     height: auto;
-    margin: 0 80px;
+    margin-right: 25px;
 }
 
 .header-top h1 {
     /* margin: 0px 750px 0px 0px; */
-    font-size: 25px;
+    font-size: 22px;
+    color: #343434;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
 }
 
 .menu-resp {
-    margin: 0 80px;
+   
 }
 
 .menu {
@@ -36,15 +48,16 @@ body{
     flex-direction: row;
     list-style-type: none;
     background: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     padding-left: 0;
     border-radius: 10px;
+    border: 1px solid #e5e5e5;
 }
 
 .menu a {
     text-decoration: none;
-    color: black;
+    color: #343434;
 }
 
 .menu li {
@@ -52,5 +65,86 @@ body{
 }
 
 .menu hr {
-    border: 1px solid black;
+    border: 1px solid color: #343434;
+}
+
+.forms-sec {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.forms-content {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.new-transaction {
+    width: 40%;
+    border: 1px solid  #9b9b9b;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.transaction-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #343434;
+}
+
+.transaction {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.transaction label {
+    font-size: 14px;
+    color: #343434;
+    margin-bottom: 10px;
+}
+
+.transaction select, .transaction input {
+    border: 1px solid #9b9b9b;
+    border-radius: 7px;
+    padding: 8px;
+}
+
+.btn-transaction button {
+    background-color: #343434;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    padding: 8px;
+    width: 100%;
+}
+
+.transaction-extract {
+    width: 50%;
+}
+
+.transaction-list {
+    table-layout: auto;
+    width: 100%; 
+    border-collapse: collapse;
+    color: #343434;
+    font-size: 14px;
+}
+
+.transaction-list th:nth-child(1) {
+    text-align: start;
+}
+
+.transaction-list tr {
+    border-bottom: 1px solid #9b9b9b;
+}
+
+.transaction-list td, th {
+    padding: 8px 15px;
+}
+
+.transaction-list td:nth-child(2) {
+    text-align: center;
 }

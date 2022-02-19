@@ -14,35 +14,78 @@
 
 <body>
  <!-- Barra Superior -->
- <section class="header-top">
-    <img src="./images/Ellipse 13.png"/>
-    <h1>Controle Financeiro</h1>
-    <div class="menu-resp">
-        <ul class="menu">
-            <li><a href="#">Cadastro de transações</a></li>
-            <hr>
-            <li><a href="#">Limmpar Dados</a></li>
-            <hr>
-            <li><a href="#">Salvar no Servidor</a></li>
-        </ul>
+ <section class="header">
+    <div class="header-top">
+        <div class="menu-logo">
+            <img src="./images/logo-icon.svg"/>
+            <h1>Controle Financeiro</h1>
+        </div>
+        <div class="menu-resp">
+            <ul class="menu">
+                <li><a href="#">Cadastro de transações</a></li>
+                <hr>
+                <li><a href="#">Limpar Dados</a></li>
+                <hr>
+                <li><a href="#">Salvar no Servidor</a></li>
+            </ul>
+        </div>
     </div>
  </section>
 
  <!-- Forms -->
- <section>
-     <div>
-         <h3>Nova Transação</h3>
+ <section class="forms-sec">
+     <div class="forms-content">
+       <div class="new-transaction">
+            <h3 class="transaction-title">Nova Transação</h3>
+            <form action="">
+                <div class="transaction">
+                   <label for="tipo">Tipo de transação</label>
+                   <select name="tipo" id="tipo">
+                        <option value="compra">Compra</option>
+                        <option value="venda">Venda</option>
+                   </select>
+                </div>
+                <div class="transaction">
+                   <label for="tipo">Nome da mercadoria</label>
+                   <input type="text" placeholder="escreva aqui...">
+                </div>
+                <div class="transaction">
+                   <label for="tipo">Valor</label>
+                   <input type="number" placeholder="R$ 0,00">
+                </div>
+                <div class="btn-transaction">
+                    <button>Adicionar transação</button>
+                </div>
+            </form>
+       </div>
+       <div class="transaction-extract">
+            <h3 class="transaction-title">Extrato de transações</h3>
+            <table class="transaction-list">
+                <thead>
+                    <tr>
+                        <th>Mercadoria</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>teste</td>
+                        <td>teste</td>
+                    </tr>
+                    <tr>
+                        <td>teste</td>
+                        <td>teste</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th>R$00,00</th>
+                    </tr>
+                </tfoot>
+            </table>
+       </div>
      </div>
-     <form action="">
-         <div>
-            <label for="tipo">Tipo de transação</label>
-            <select name="tipo" id="tipo">
-            <option value="compra">Compra</option>
-            <option value="venda">Venda</option>
-            </select>
-         </div>
-
-     </form>
  </section>
 
 
